@@ -1,0 +1,52 @@
+.misa-input{
+    outline: none;
+    padding: 0;
+    border-radius: 5px;
+    height: 28px;
+    color: #000000;
+    font-family: 'GoogleSans-Regular';
+    border: 1px solid #DBDEFF;
+    padding: 4px;
+    font-size: 12px;
+}
+.misa-input:focus{
+    outline: none;
+    border: 1px solid #01b075;
+}
+
+
+.misa-input-group{
+    background: #ffffff;
+    color: #bbbbbb;
+    font-family: 'GoogleSans-Italic';
+    height: 40px;
+    font-size: 12px;
+    border: 1px solid #DBDEFF;
+    padding: 0 8px;
+    border-radius: 5px;
+    
+}
+    .misa-input-group>.misa-input-text{
+        border: none;
+        outline: none;
+        line-height: 38px;
+        padding: 0;
+        width: 80%;
+    }
+    .misa-input-group>.misa-input-text::placeholder{
+        color: #bbbbbb;
+        font-family: 'GoogleSans-Italic';
+    }
+
+
+
+.misa-input-group-prepend{
+    display: inline-block;
+}
+.misa-input-group-text{
+    font-size: 16px;
+    padding: 0 8px;
+    line-height: 40px;
+    
+}
+

@@ -1,0 +1,46 @@
+.misa-heading{
+    font-size: 24px;
+    font-family: 'GoogleSans-Bold';
+    text-transform: uppercase;
+}
+
+.misa-tittle{
+    font-size: 20px;
+    font-family: 'GoogleSans-Bold';
+    text-transform: uppercase;
+}
+
+.misa-tittle2{
+    font-size: 15px;
+    font-family: 'GoogleSans-Bold';
+    text-transform: uppercase;
+}
+
+.misa-label-field-input{
+    font-size: 13px;
+    font-family: 'GoogleSans-Medium'; 
+}
+
+.misa-label{
+    font-size: 13px;
+    color: #454545;
+    font-family: 'GoogleSans-Regular';
+}
+
+.misa-content-details{
+    font-size: 13px;
+    font-family: 'GoogleSans-Medium';
+}
+
+.misa-body-content{
+    font-size: 13px;
+    color: #454545;
+    font-family: 'GoogleSans-Regular';
+}
+
+
+.misa-subtext-hinttext{
+    font-size: 11px;
+    color:#BBBBBB;
+    font-family: 'GoogleSans-Regular';
+}

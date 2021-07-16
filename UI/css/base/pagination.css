@@ -1,0 +1,42 @@
+.pagination{
+    margin: 0 auto;
+    display: flex;
+}
+    .pagination>.back-to-start{
+        width: 20px;
+        height: 20px;
+        background: url('/content/icon/btn-firstpage.svg');
+    }
+
+    .pagination>.pre-page{
+        width: 20px;
+        height: 20px;
+        background: url('/content/icon/btn-prev-page.svg');
+    }
+
+    .pagination>.next-page{
+        width: 20px;
+        height: 20px;
+        background: url('/content/icon/btn-next-page.svg');
+    }
+
+    .pagination>.go-to-end{
+        width: 20px;
+        height: 20px;
+        background: url('/content/icon/btn-lastpage.svg');
+    }
+
+    .pagination>.number-page{
+        display: flex;
+    }
+        .number-page>.number{
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #e5e5e5;
+            margin: 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            

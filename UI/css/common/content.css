@@ -1,0 +1,14 @@
+.content{
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+    .content>.container{
+        padding: 0 16px;
+        height: calc(100vh - 69px);
+        display: flex;
+        flex-direction: column;
+    }
+
+    

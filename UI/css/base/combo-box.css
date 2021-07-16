@@ -1,0 +1,18 @@
+.misa-combo-box{
+    border: 1px solid #DBDEFF;
+    font-family: 'GoogleSans-Regular';
+    font-size: 13px;
+    outline: none;
+    height: 40px;
+    padding-left: 16px;
+    border-radius: 5px;
+    width: 180px;
+}
+
+    .misa-combo-box:focus{
+        border: 1px solid #01b075;
+    }
+
+    .misa-combo-box{
+        
+    }

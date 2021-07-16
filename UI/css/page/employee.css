@@ -1,0 +1,60 @@
+.content-header{
+    width: 100%;
+}
+    .content-header>.heading, .content-header>.filter{
+        display: flex;
+        padding: 10px 0;
+    }
+        .heading>.add-site{
+            margin-left: auto;
+            align-self: center;
+        }     
+        
+        .filter>.reload-site{
+            align-self: center;
+            margin-left: auto;
+            border: 1px solid #bbbbbb;
+            border-radius: 5px;
+            height: 40px;
+            width: 40px;
+        }
+
+            .reload-site>.reload-icon{
+                background: url('/content/icon/refresh.png');
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                height: 20px;
+                width: 20px;
+                margin: 10px;
+            }
+
+.content-body{
+    padding: 10px 0;
+    height: 100%;
+}
+.content-footer{
+}
+    .content-footer>.paging{
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+    }
+        .paging>.pagintation-text{
+            align-self: center;
+        }
+        .paging>.pagination{
+            align-self: center;
+        }
+        .paging>.pagination-total{
+            align-self: center;
+        }
+        
+
+#search{
+width: 350px;
+}
+
+#department{
+padding: 0 16px;
+}

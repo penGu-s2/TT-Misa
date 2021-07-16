@@ -1,0 +1,19 @@
+.misa-tbl{
+    width: 100%;
+    border-collapse: collapse;
+}
+    .misa-tbl>thead{
+        text-align: left;
+    }
+        .misa-tbl tr{
+            height: 48px;
+        }
+            th, td{
+                border-bottom: 1px solid #bbbbbb;
+            }
+
+
+        .misa-tbl>tbody>tr:nth-child(odd) { 
+            background-color: #e5e5e5; 
+        }
+            
