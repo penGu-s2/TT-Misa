@@ -1,19 +1,47 @@
-.misa-tbl{
+.tbl {
     width: 100%;
     border-collapse: collapse;
+    font-size: 13px;
 }
-    .misa-tbl>thead{
-        text-align: left;
-    }
-        .misa-tbl tr{
-            height: 48px;
-        }
-            th, td{
-                border-bottom: 1px solid #bbbbbb;
-            }
 
+.tbl td {
+    border-bottom: 1px solid #e5e5e5;
+    height: 48px;
+    padding: 0 10px;
+    text-align: left;
+    max-width: 80px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 
-        .misa-tbl>tbody>tr:nth-child(odd) { 
-            background-color: #e5e5e5; 
-        }
-            
+.tbl td .tooltip {
+    display: none;
+    position: absolute;
+    padding: 8px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: 1px solid #e5e5e5;
+}
+
+.tbl td:hover .tooltip {
+    display: block;
+}
+
+.tbl th {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    height: 48px;
+    text-align: left;
+    padding: 0 10px;
+    white-space: nowrap;
+}
+
+.tbl th>i {
+    padding: 0 0 0 8px;
+}
+
+.tbl-striped tbody tr:nth-child(odd) {
+    background-color: #e5e5e5;
+}

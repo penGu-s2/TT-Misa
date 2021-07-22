@@ -1,79 +1,46 @@
-.misa-btn{
+.btn-icon {
+    height: 40px;
+    background-color: #019160;
+    outline: none;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
-    height: 40px;
     font-size: 13px;
-    color: #ffffff;
-    font-family: 'GoogleSans-Regular';
-    padding: 0 24px;
-    text-align: center;
-    min-width: 100px;
-}
-
-.misa-btn-default{
-    background-color: #019160;
-}
-
-.misa-btn-default:hover{
-    background-color: #2FBE8E;
-}
-
-.misa-btn-default.active{
-    background-color: #01B075;
-}
-
-
-.misa-btn-icon{
-    border-radius: 4px;
-    height: 40px;
-    font-size: 13px;
-    font-family: 'GoogleSans-Regular';
     padding: 0 16px;
-    text-align: left;
-    color: #ffffff;
-    border: none;
     min-width: 100px;
+    font-family: 'GoogleSans-Regular';
 }
 
-.misa-btn-icon-default{
-    background-color: #019160;
-}
-
-.misa-btn-icon-default>i{
+.btn-icon>i {
     padding-right: 8px;
 }
 
-.misa-btn-icon-default:hover{
+.btn-icon:hover {
     background-color: #2FBE8E;
 }
 
-.misa-btn-icon-default.active{
-    background-color: #01B075;
+.btn-icon:focus {
+    background-color: #01b075;
 }
 
-.misa-btn-icon-default.active>i{
-    padding-right: 8px;
-}
-
-
-
-.misa-white-btn{
-    border-radius: 4px;
-    height: 40px;
-    font-size: 13px;
-    font-family: 'GoogleSans-Regular';
+.btn-default {
+    border: 1px solid #bbbbbb;
     padding: 0 24px;
     text-align: center;
-    color: #000000;
-    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
     min-width: 100px;
+    font-size: 13px;
 }
-.misa-white-btn:hover{
+
+.btn-default:hover {
+    border: none;
     background-color: #E9EBEE;
-    border: none;
 }
-.misa-white-btn.active{
-    background-color: #01B075;
-    color: #ffffff;
+
+.btn-default:focus {
+    background-color: #01b075;
     border: none;
+    color: #ffffff;
 }

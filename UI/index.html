@@ -6,18 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/common/main.css">
-    <link rel="stylesheet" href="/css/base/font.css">
-    <link rel="stylesheet" href="/css/base/button.css">
-    <link rel="stylesheet" href="/css/base/combo-box.css">
-    <link rel="stylesheet" href="/css/base/input.css">
-    <link rel="stylesheet" href="/css/common/navbar.css">
-    <link rel="stylesheet" href="/css/common/header.css">
-    <link rel="stylesheet" href="/css/common/content.css">
-    <link rel="stylesheet" href="/css/base/table.css">
-    <link rel="stylesheet" href="/css/base/pagination.css">
-    <link rel="stylesheet" href="/css/page/employee.css">
-    <link rel="stylesheet" href="/css/base/modal.css">
+    <link rel="stylesheet" href="../UI/css/main.css">
+    <link rel="stylesheet" href="../UI/css/base/font.css">
+    <link rel="stylesheet" href="../UI/css/base/button.css">
+    <link rel="stylesheet" href="../UI/css/base/combo-box.css">
+    <link rel="stylesheet" href="../UI/css/base/input.css">
+    <link rel="stylesheet" href="../UI/css/common/navbar.css">
+    <link rel="stylesheet" href="../UI/css/common/header.css">
+    <link rel="stylesheet" href="../UI/css/common/content.css">
+    <link rel="stylesheet" href="../UI/css/base/table.css">
+    <link rel="stylesheet" href="../UI/css/base/pagination.css">
+    <link rel="stylesheet" href="../UI/css/page/employee.css">
+    <link rel="stylesheet" href="../UI/css/base/modal.css">
+    <link rel="stylesheet" href="../UI/css/page/employee-detail.css">
+    <link rel="stylesheet" href="../UI/css/base/gird.css">
 </head>
 
 <body>
@@ -30,43 +32,74 @@
             </div>
         </div>
         <div class="navbar-content">
-            <div class="nav-item">
-                <div class="nav-item-icon" id="dashboard"></div>
+            <a href="/" class="nav-item">
+                <div class="nav-item-icon">
+                    <i class="fa fa-tachometer" aria-hidden="true"></i>
+                </div>
                 <div class="nav-item-text">Tổng quan</div>
-            </div>
-            <div class="nav-item">
-                <div class="nav-item-icon" id="report"></div>
+            </a>
+            <a href="/" class="nav-item">
+                <div class="nav-item-icon">
+                    <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                </div>
                 <div class="nav-item-text">Báo cáo</div>
-            </div>
-            <div class="nav-item">
-                <div class="nav-item-icon" id="buy"></div>
+            </a>
+            <a href="/" class="nav-item">
+                <div class="nav-item-icon">
+                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
                 <div class="nav-item-text">Mua hàng</div>
-            </div>
-            <div class="nav-item">
-                <div class="nav-item-icon" id="employee"></div>
+            </a>
+            <a href="/" class="nav-item">
+                <div class="nav-item-icon">
+                    <i class="fa fa-male" aria-hidden="true"></i>
+                </div>
                 <div class="nav-item-text">Danh mục nhân viên</div>
-            </div>
-            <div class="nav-item">
-                <div class="nav-item-icon" id="customer"></div>
+            </a>
+            <a href="/" class="nav-item">
+                <div class="nav-item-icon">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
                 <div class="nav-item-text">Danh mục khách hàng</div>
-            </div>
-            <div class="nav-item">
-                <div class="nav-item-icon" id="setting"></div>
+            </a>
+            <a href="/" class="nav-item">
+                <div class="nav-item-icon">
+                    <i class="fa fa-cogs" aria-hidden="true"></i>
+                </div>
                 <div class="nav-item-text">Thiết lập hệ thống</div>
-            </div>
+            </a>
         </div>
     </div>
     <div class="header">
         <div class="container">
-            <div class="left">
-                <select name="" id="branch" class="misa-combo-box">
-                    <option value="">Nhà hàng Biển Đông</option>
-                </select>
+            <div class="header-left">
+                <div class="dropdown" id="branch">
+                    <div class="drop-text-site">
+                        <div class="drop-text">
+                            Nhà hàng Biển Đông
+                        </div>
+                        <div class="drop-icon">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="drop-data-site">
+                        <div class="drop-item selected" data-value="1">
+                            <div class="checked-icon">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <div class="item-text">Nhà hàng Biển Đông</div>
+                        </div>
+                        <div class="drop-item" data-value="2">
+                            <div class="checked-icon"></div>
+                            <div class="item-text">Nhà hàng Biển Tây</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="right">
+            <div class="header-right">
                 <div class="information-site">
                     <div class="avatar-logo"></div>
-                    <div class="username">Lê Khắc Phúc</div>
+                    <div class="username">Nguyễn Đức Thắng</div>
                 </div>
                 <div class="more-icon"></div>
             </div>
@@ -76,10 +109,9 @@
         <div class="container">
             <div class="content-header">
                 <div class="heading">
-
-                    <p class="misa-tittle2">Danh sách nhân viên</p>
-                    <div class="add-site">
-                        <button class="misa-btn-icon misa-btn-icon-default">
+                    <p class="tittle">Danh sách nhân viên</p>
+                    <div class="add-employee-site">
+                        <button class="btn-icon" id="add-employee-btn">
                             <i class="fa fa-user-plus"></i>
                             Thêm nhân viên
                         </button>
@@ -87,169 +119,60 @@
 
                 </div>
                 <div class="filter">
-                    <div class="misa-input-group" id="search">
-                        <div class="misa-input-group-prepend">
-                            <span class="misa-input-group-text">
+                    <div class="search-box filter-item">
+                        <div class="box">
+                            <div class="search-icon-site">
                                 <i class="fa fa-search"></i>
-                            </span>
+                            </div>
+                            <input type="text" class="input-search" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
                         </div>
-                        <input type="text" class="misa-input-text" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại" />
                     </div>
+                    <div class="dropdown filter-item" name="department" id="department">
+                        <div class="drop-text-site">
+                            <div class="drop-text">Tất cả phòng ban</div>
+                            <div class="drop-icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="drop-data-site">
 
-                    <div id="department">
-                        <select name="" id="" class="misa-combo-box">
-                            <option value="">Tất cả phòng ban</option>
-                        </select>
+                        </div>
                     </div>
+                    <div class="dropdown filter-item" id="position">
+                        <div class="drop-text-site">
+                            <div class="drop-text">Tất cả vị trí</div>
+                            <div class="drop-icon">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="drop-data-site">
 
-                    <div id="position">
-                        <select name="" id="" class="misa-combo-box">
-                            <option value="">Tất cả vị trí</option>
-                        </select>
+                        </div>
                     </div>
-
                     <div class="reload-site">
                         <div class="reload-icon"></div>
                     </div>
                 </div>
             </div>
             <div class="content-body">
-                <table class="misa-tbl misa-tbl-striped">
+                <table class="tbl tbl-striped" id="misa-datatable">
                     <thead>
                         <tr>
-                            <th>Mã nhân viên</th>
-                            <th>Họ và tên</th>
-                            <th>Giới tính</th>
-                            <th>Ngày sinh</th>
-                            <th>Điện thoại</th>
-                            <th>Email</th>
-                            <th>Chức vụ</th>
-                            <th>Phòng ban</th>
-                            <th>Mức lương cơ bản</th>
-                            <th>Trạng thái công việc</th>
+                            <th class="txt-align-right">#</th>
+                            <th>Mã nhân viên <i class="fa fa-sort"></i></th>
+                            <th>Họ và tên <i class="fa fa-sort"></i></th>
+                            <th>Giới tính <i class="fa fa-sort"></i></th>
+                            <th>Ngày sinh <i class="fa fa-sort"></i></th>
+                            <th>Điện thoại <i class="fa fa-sort"></i></th>
+                            <th>Email <i class="fa fa-sort"></i></th>
+                            <th>Chức vụ <i class="fa fa-sort"></i></th>
+                            <th>Phòng ban <i class="fa fa-sort"></i></th>
+                            <th class="txt-align-right">Mức lương cơ bản <i class="fa fa-sort"></i></th>
+                            <th>Trạng thái công việc <i class="fa fa-sort"></i></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
-                        <tr>
-                            <td>NV-532408</td>
-                            <td>Nguyễn Văn A</td>
-                            <td></td>
-                            <td>11/08/1978</td>
-                            <td>0978190602</td>
-                            <td>Nguyenthang9199@gmail.com</td>
-                            <td>Giám đốc</td>
-                            <td>Phòng nhân sự</td>
-                            <td>17.739.291</td>
-                            <td>Đang thử việc</td>
-                        </tr>
+
                     </tbody>
 
                 </table>
@@ -284,17 +207,257 @@
         </div>
     </div>
 
-    <div id="myModal" class="modal">
+    <div class="modal" id="detail-employee">
+        <div class="container">
+            <div class="modal-header">
+                <div class="tittle">Thông tin nhân viên
+                </div>
+                <div class="close-modal-site">
+                    <button class="close">&times;</button>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="avatar-box">
+                            <div class="avatar-site"></div>
+                            <p style="text-align: center;">(Vui lòng thêm ảnh )</p>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div class="info-box-general">
+                            <div class="row title-info-box" style="margin-top: 0 !important;">
+                                <div class="tittle" style="font-size: 15px;">A. Thông tin chung :
+                                    <div class="progress-bottom"></div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div style="padding-right: 24px;">
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Mã nhân viên(<span style="color: red;">*</span>)</p>
+                                                <input type="text" class="input" />
+                                            </div>
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>Some text in the Modal..</p>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Ngày sinh</p>
+                                                <input type="date" class="input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Số CMTND/ Căn cước(<span style="color: red;">*</span>)
+                                                </p>
+                                                <input type="text" class="input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Nơi cấp</p>
+                                                <input type="text" class="input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Email(<span style="color: red;">*</span>)</p>
+                                                <input type="text" class="input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div style="padding-right: 24px;">
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Họ và tên(<span style="color: red;">*</span>)</p>
+                                                <input type="text" class="input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Giới tính</p>
+                                                <div class="dropdown" style="width: 100%;">
+                                                    <div class="drop-text-site">
+                                                        <div class="drop-text">Nam</div>
+                                                        <div class="drop-icon">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-data-site">
+                                                        <div class="drop-item selected">
+                                                            <div class="checked-icon">
+                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="item-text">Nam</div>
+                                                        </div>
+                                                        <div class="drop-item">
+                                                            <div class="checked-icon"></div>
+                                                            <div class="item-text">Nữ</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Ngày cấp(<span style="color: red;">*</span>)</p>
+                                                <input type="date" class="input" />
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Số điện thoại(<span style="color: red;">*</span>)</p>
+                                                <input type="text" class="input" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box-job">
+                            <div class="tittle title-info-box" style="font-size: 15px;">
+                                B. Thông tin công việc :
+                                <div class="progress-bottom"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div style="padding-right: 24px;">
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Vị trí</p>
+                                                <div class="dropdown" style="width: 100%;">
+                                                    <div class="drop-text-site">
+                                                        <div class="drop-text">Giám đốc</div>
+                                                        <div class="drop-icon">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-data-site">
+                                                        <div class="drop-item selected">
+                                                            <div class="checked-icon">
+                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="item-text">Giám đốc</div>
+                                                        </div>
+                                                        <div class="drop-item">
+                                                            <div class="checked-icon"></div>
+                                                            <div class="item-text">Nhân viên</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Mã số thuế</p>
+                                                <input type="text" class="input">
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Ngày gia nhập công ty</p>
+                                                <input type="date" class="input">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div style="padding-right: 24px;">
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Phòng ban</p>
+                                                <div class="dropdown" style="width: 100%;">
+                                                    <div class="drop-text-site">
+                                                        <div class="drop-text">Phòng nhân sự</div>
+                                                        <div class="drop-icon">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-data-site">
+                                                        <div class="drop-item selected">
+                                                            <div class="checked-icon">
+                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="item-text">Phòng nhân sự</div>
+                                                        </div>
+                                                        <div class="drop-item">
+                                                            <div class="checked-icon"></div>
+                                                            <div class="item-text">Phòng phần mềm</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Mức lương cơ bản</p>
+                                                <div style="position: relative;display: flex;">
+                                                    <input type="text" class="input salary-input-box" value="">
+                                                    <div class="price-txt">(VNĐ)</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Tình trạng công việc</p>
+                                                <div class="dropdown" style="width: 100%;">
+                                                    <div class="drop-text-site">
+                                                        <div class="drop-text">Đang làm việc</div>
+                                                        <div class="drop-icon">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-data-site">
+                                                        <div class="drop-item selected">
+                                                            <div class="checked-icon">
+                                                                <i class="fa fa-check" aria-hidden="true"></i>
+                                                            </div>
+                                                            <div class="item-text">Đang làm việc</div>
+                                                        </div>
+                                                        <div class="drop-item">
+                                                            <div class="checked-icon"></div>
+                                                            <div class="item-text">Đã nghỉ việc</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="modal-action">
+                    <div class="action-box">
+                        <button class="btn-default cancle">Hủy</button>
+                        <button class="btn-icon">
+                            <i class="fa fa-save"></i>
+                            Lưu
+                        </button>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-
     </div>
 
 </body>
 
 </html>
-<script src="https://use.fontawesome.com/1e084cc5a9.js" defer></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/1e084cc5a9.js"></script>
+<script src="../UI/js/page/employee.js"></script>
+<script src="../UI/js/common/common.js"></script>
+<script src="../UI/js/page/employee-detail.js"></script>
