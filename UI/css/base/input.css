@@ -1,6 +1,7 @@
 .search-box {
     border: 1px solid #BBBBBB;
     border-radius: 4px;
+    width: 300px;
 }
 
 .search-box:hover {
@@ -31,6 +32,19 @@
     font-family: 'GoogleSans-Regular';
     font-size: 13px;
     padding-right: 16px;
+}
+
+.reset-txt-icon {
+    font-size: 16px;
+    padding: 0 10px;
+    display: flex;
+    color: #bbbbbb;
+}
+
+.reset-txt-icon>i {
+    display: none;
+    align-self: center;
+    cursor: pointer;
 }
 
 .label {

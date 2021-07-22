@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TT</title>
+
     <link rel="stylesheet" href="../UI/css/main.css">
     <link rel="stylesheet" href="../UI/css/base/font.css">
     <link rel="stylesheet" href="../UI/css/base/button.css">
@@ -16,10 +17,10 @@
     <link rel="stylesheet" href="../UI/css/common/content.css">
     <link rel="stylesheet" href="../UI/css/base/table.css">
     <link rel="stylesheet" href="../UI/css/base/pagination.css">
-    <link rel="stylesheet" href="../UI/css/page/employee.css">
-    <link rel="stylesheet" href="../UI/css/base/modal.css">
     <link rel="stylesheet" href="../UI/css/page/employee-detail.css">
-    <link rel="stylesheet" href="../UI/css/base/gird.css">
+    <link rel="stylesheet" href="../UI/css/base/modal.css">
+    <link rel="stylesheet" href="../UI/css/page/employee.css">
+    <link rel="stylesheet" href="../UI/css/base/grid.css">
 </head>
 
 <body>
@@ -125,9 +126,12 @@
                                 <i class="fa fa-search"></i>
                             </div>
                             <input type="text" class="input-search" placeholder="Tìm kiếm theo Mã, Tên hoặc Số điện thoại">
+                            <div class="reset-txt-icon">
+                                <i class="fa fa-times-circle reset-icon" aria-hidden="true"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="dropdown filter-item" name="department" id="department">
+                    <div class="dropdown filter-item department" name="department">
                         <div class="drop-text-site">
                             <div class="drop-text">Tất cả phòng ban</div>
                             <div class="drop-icon">
@@ -135,10 +139,9 @@
                             </div>
                         </div>
                         <div class="drop-data-site">
-
                         </div>
                     </div>
-                    <div class="dropdown filter-item" id="position">
+                    <div class="dropdown filter-item position">
                         <div class="drop-text-site">
                             <div class="drop-text">Tất cả vị trí</div>
                             <div class="drop-icon">
@@ -146,19 +149,18 @@
                             </div>
                         </div>
                         <div class="drop-data-site">
-
                         </div>
                     </div>
-                    <div class="reload-site">
+                    <button class="reload-site" id="reloadBtn">
                         <div class="reload-icon"></div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div class="content-body">
                 <table class="tbl tbl-striped" id="misa-datatable">
                     <thead>
                         <tr>
-                            <th class="txt-align-right">#</th>
+                            <th class="txt-align-right">STT</th>
                             <th>Mã nhân viên <i class="fa fa-sort"></i></th>
                             <th>Họ và tên <i class="fa fa-sort"></i></th>
                             <th>Giới tính <i class="fa fa-sort"></i></th>
@@ -172,7 +174,6 @@
                         </tr>
                     </thead>
                     <tbody>
-
                     </tbody>
 
                 </table>
@@ -207,7 +208,7 @@
         </div>
     </div>
 
-    <div class="modal" id="detail-employee">
+    <div class="modal" id="detail-employee" method="POST" employeeId="">
         <div class="container">
             <div class="modal-header">
                 <div class="tittle">Thông tin nhân viên
@@ -217,198 +218,214 @@
                 </div>
             </div>
             <div class="modal-content">
-                <div class="row">
+                <div class="row" style="padding: 0 24px;">
                     <div class="col-3">
                         <div class="avatar-box">
                             <div class="avatar-site"></div>
-                            <p style="text-align: center;">(Vui lòng thêm ảnh )</p>
+                            <p style="text-align: center;">(Vui lòng chọn ảnh có định dạng .jpg, .jpeg, .png, .gif)</p>
                         </div>
                     </div>
-                    <div class="col-9">
+                    <div class="col-9 ">
                         <div class="info-box-general">
-                            <div class="row title-info-box" style="margin-top: 0 !important;">
+                            <div class="row title-info-box" style="margin-top: 0 !important; padding-left: 16px;">
                                 <div class="tittle" style="font-size: 15px;">A. Thông tin chung :
                                     <div class="progress-bottom"></div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <div style="padding-right: 24px;">
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Mã nhân viên(<span style="color: red;">*</span>)</p>
-                                                <input type="text" class="input" />
-                                            </div>
-
-                                        </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Ngày sinh</p>
-                                                <input type="date" class="input" />
-                                            </div>
-                                        </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Số CMTND/ Căn cước(<span style="color: red;">*</span>)
-                                                </p>
-                                                <input type="text" class="input" />
-                                            </div>
-                                        </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Nơi cấp</p>
-                                                <input type="text" class="input" />
-                                            </div>
-                                        </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Email(<span style="color: red;">*</span>)</p>
-                                                <input type="text" class="input" />
-                                            </div>
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Mã nhân viên(<span style="color: red;">*</span>)</p>
+                                            <input type="text" required class="input" name="EmployeeCode" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <div style="padding-right: 24px;">
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Họ và tên(<span style="color: red;">*</span>)</p>
-                                                <input type="text" class="input" />
-                                            </div>
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Họ và tên(<span style="color: red;">*</span>)</p>
+                                            <input type="text" required class="input" name="FullName" />
                                         </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Giới tính</p>
-                                                <div class="dropdown" style="width: 100%;">
-                                                    <div class="drop-text-site">
-                                                        <div class="drop-text">Nam</div>
-                                                        <div class="drop-icon">
-                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Ngày sinh</p>
+                                            <input type="date" class="input" name="DateOfBirth" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Giới tính</p>
+                                            <div class="dropdown" name="GenderName" value="1" style="width: 100%;">
+                                                <div class="drop-text-site">
+                                                    <div class="drop-text">Nam</div>
+                                                    <div class="drop-icon">
+                                                        <i class="fa fa-angle-down" aria-hidden="true"></i>
                                                     </div>
-                                                    <div class="drop-data-site">
-                                                        <div class="drop-item selected">
-                                                            <div class="checked-icon">
-                                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="item-text">Nam</div>
+                                                </div>
+                                                <div class="drop-data-site">
+                                                    <div class="drop-item selected" value="1">
+                                                        <div class="checked-icon">
+                                                            <i class="fa fa-check" aria-hidden="true"></i>
                                                         </div>
-                                                        <div class="drop-item">
-                                                            <div class="checked-icon"></div>
-                                                            <div class="item-text">Nữ</div>
-                                                        </div>
+                                                        <div class="item-text">Nam</div>
+                                                    </div>
+                                                    <div class="drop-item" value="0">
+                                                        <div class="checked-icon"></div>
+                                                        <div class="item-text">Nữ</div>
+                                                    </div>
+                                                    <div class="drop-item" value="2">
+                                                        <div class="checked-icon"></div>
+                                                        <div class="item-text">Không xác định</div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Ngày cấp(<span style="color: red;">*</span>)</p>
-                                                <input type="date" class="input" />
-                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-6"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Số CMTND/ Căn cước(<span style="color: red;">*</span>)
+                                            </p>
+                                            <input type="text" required class="input" name="IdentityNumber" />
                                         </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-
-                                            </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Ngày cấp(<span style="color: red;">*</span>)</p>
+                                            <input type="date" required class="input" name="IdentityDate" />
                                         </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Số điện thoại(<span style="color: red;">*</span>)</p>
-                                                <input type="text" class="input" />
-                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Nơi cấp</p>
+                                            <input type="text" class="input" name="IdentityPlace" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col-item">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Email(<span style="color: red;">*</span>)</p>
+                                            <input type="email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required class="input" name="Email" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="col-item">
+                                        <div class="label-input">
+                                            <p class="label">Số điện thoại(<span style="color: red;">*</span>)</p>
+                                            <input type="text" required class="input" name="PhoneNumber" />
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="info-box-job">
-                            <div class="tittle title-info-box" style="font-size: 15px;">
+                            <div class="tittle title-info-box" style="font-size: 15px; padding-left: 16px;">
                                 B. Thông tin công việc :
                                 <div class="progress-bottom"></div>
                             </div>
                             <div class="row">
-                                <div class="col-6">
-                                    <div style="padding-right: 24px;">
+                                <div class="row">
+                                    <div class="col-6">
                                         <div class="col-item">
                                             <div class="label-input">
                                                 <p class="label">Vị trí</p>
-                                                <div class="dropdown" style="width: 100%;">
+                                                <div class="dropdown position position-modal" name="PositionName" value="" style="width: 100%;">
                                                     <div class="drop-text-site">
-                                                        <div class="drop-text">Giám đốc</div>
+                                                        <div class="drop-text"></div>
                                                         <div class="drop-icon">
                                                             <i class="fa fa-angle-down" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="drop-data-site">
-                                                        <div class="drop-item selected">
-                                                            <div class="checked-icon">
-                                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="item-text">Giám đốc</div>
-                                                        </div>
-                                                        <div class="drop-item">
-                                                            <div class="checked-icon"></div>
-                                                            <div class="item-text">Nhân viên</div>
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Phòng ban</p>
+                                                <div class="dropdown department department-modal" name="DepartmentName" value="" style="width: 100%;">
+                                                    <div class="drop-text-site">
+                                                        <div class="drop-text"></div>
+                                                        <div class="drop-icon">
+                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="drop-data-site">
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
                                         <div class="col-item">
                                             <div class="label-input">
                                                 <p class="label">Mã số thuế</p>
                                                 <input type="text" class="input">
                                             </div>
                                         </div>
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Ngày gia nhập công ty</p>
-                                                <input type="date" class="input">
-                                            </div>
-                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-6">
-                                    <div style="padding-right: 24px;">
-                                        <div class="col-item">
-                                            <div class="label-input">
-                                                <p class="label">Phòng ban</p>
-                                                <div class="dropdown" style="width: 100%;">
-                                                    <div class="drop-text-site">
-                                                        <div class="drop-text">Phòng nhân sự</div>
-                                                        <div class="drop-icon">
-                                                            <i class="fa fa-angle-down" aria-hidden="true"></i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="drop-data-site">
-                                                        <div class="drop-item selected">
-                                                            <div class="checked-icon">
-                                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                                            </div>
-                                                            <div class="item-text">Phòng nhân sự</div>
-                                                        </div>
-                                                        <div class="drop-item">
-                                                            <div class="checked-icon"></div>
-                                                            <div class="item-text">Phòng phần mềm</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="col-6">
                                         <div class="col-item">
                                             <div class="label-input">
                                                 <p class="label">Mức lương cơ bản</p>
                                                 <div style="position: relative;display: flex;">
-                                                    <input type="text" class="input salary-input-box" value="">
+                                                    <input type="text" class="input salary-input-box" name="Salary" value="">
                                                     <div class="price-txt">(VNĐ)</div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="col-item">
+                                            <div class="label-input">
+                                                <p class="label">Ngày gia nhập công ty</p>
+                                                <input type="date" class="input" name="JoinDate">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
                                         <div class="col-item">
                                             <div class="label-input">
                                                 <p class="label">Tình trạng công việc</p>
-                                                <div class="dropdown" style="width: 100%;">
+                                                <div class="dropdown" name="WorkStatus" style="width: 100%;">
                                                     <div class="drop-text-site">
                                                         <div class="drop-text">Đang làm việc</div>
                                                         <div class="drop-icon">
@@ -440,8 +457,8 @@
             <div class="modal-footer">
                 <div class="modal-action">
                     <div class="action-box">
-                        <button class="btn-default cancle">Hủy</button>
-                        <button class="btn-icon">
+                        <button class="btn-default cancel">Hủy</button>
+                        <button class="btn-icon" id="btnSave">
                             <i class="fa fa-save"></i>
                             Lưu
                         </button>
@@ -458,6 +475,6 @@
 </html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://use.fontawesome.com/1e084cc5a9.js"></script>
-<script src="../UI/js/page/employee.js"></script>
 <script src="../UI/js/common/common.js"></script>
 <script src="../UI/js/page/employee-detail.js"></script>
+<script src="../UI/js/page/employee.js"></script>
