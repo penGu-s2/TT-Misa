@@ -1,0 +1,86 @@
+.dropdown {
+    position: relative;
+    width: 200px;
+    background-color: #ffffff;
+}
+
+.drop-text-site:hover {
+    border: 1px solid #01b075;
+}
+
+.drop-text-site {
+    height: 40px;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    display: flex;
+}
+
+.drop-text {
+    line-height: 40px;
+    padding: 0 16px;
+    white-space: nowrap;
+}
+
+.drop-icon {
+    background-color: #ffffff;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 0 12px;
+}
+
+.drop-icon>i {
+    font-size: 16px;
+    line-height: 40px;
+}
+
+.drop-data-site {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    border-radius: 4px;
+    padding: 4px 0;
+    box-shadow: 1px 2px 1px 2px #BBBBBB;
+    z-index: 1;
+    background-color: #ffffff;
+}
+
+.drop-item {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+}
+
+.drop-item:hover {
+    background: #E9EBEE;
+}
+
+.checked-icon {
+    width: 16px;
+    align-self: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.checked-icon>i {
+    font-size: 16px;
+    margin: auto 0;
+}
+
+.item-text {
+    font-size: 13px;
+    color: #000000;
+}
+
+.drop-item.selected {
+    background-color: #01b075;
+}
+
+.drop-item.selected>.item-text {
+    color: #ffffff;
+}
+
+.drop-item.selected>.checked-icon {
+    color: #ffffff;
+}

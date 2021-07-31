@@ -1,0 +1,26 @@
+.tittle {
+    font-family: 'GoogleSans-Regular';
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.tittle-modal {
+    font-family: 'GoogleSans-Regular';
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+/*----------------------*/
+
+.txt-align-right {
+    text-align: right !important;
+}
+
+.txt-align-left {
+    text-align: left !important;
+}
+
+.txt-align-center {
+    text-align: center !important;
+}

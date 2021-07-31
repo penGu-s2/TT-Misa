@@ -1,0 +1,109 @@
+.content {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px 0;
+}
+
+.content>.container {
+    padding: 0 16px;
+    height: calc(100vh - 69px);
+    display: flex;
+    flex-direction: column;
+}
+
+.content-header {
+    width: 100%;
+}
+
+.heading {
+    display: flex;
+    padding-top: 24px;
+    white-space: nowrap;
+}
+
+.filter {
+    display: flex;
+}
+
+.heading>.add-employee-site {
+    margin-left: auto;
+    align-self: center;
+}
+
+.filter>.filter-item {
+    margin: 0 8px;
+}
+
+.filter-item.search-box {
+    margin-left: 0;
+}
+
+.reload-site {
+    cursor: pointer;
+    align-self: center;
+    margin-left: auto;
+    border: 1px solid #bbbbbb;
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    background-color: #ffffff;
+    display: flex;
+}
+
+.reload-site:hover {
+    border: 1px solid #01b075;
+}
+
+.reload-site>.reload-icon {
+    background: url('../../assets/icon/refresh.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 20px;
+    width: 100%;
+    margin: auto 0;
+}
+
+.content-body {
+    margin-top: 16px;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+ ::-webkit-scrollbar {
+    width: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.content-footer>.paging {
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+}
+
+.paging>.pagintation-text {
+    align-self: center;
+}
+
+.paging>.pagination {
+    align-self: center;
+}
+
+.paging>.pagination-total {
+    align-self: center;
+}
+
+#misa-datatable {}

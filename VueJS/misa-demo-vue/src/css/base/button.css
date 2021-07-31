@@ -1,0 +1,107 @@
+.btn-icon {
+    height: 40px;
+    background-color: #019160;
+    outline: none;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 0 16px;
+    min-width: 100px;
+    font-family: 'GoogleSans-Regular';
+}
+
+.btn-icon>i {
+    padding-right: 8px;
+}
+
+.btn-icon:hover {
+    background-color: #2FBE8E;
+}
+
+.btn-icon:focus {
+    background-color: #01b075;
+}
+
+.btn-default {
+    border: 1px solid #bbbbbb;
+    padding: 0 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
+    min-width: 100px;
+    font-size: 13px;
+}
+
+.btn-default:hover {
+    border: none;
+    background-color: #E9EBEE;
+}
+
+.btn-default:focus {
+    background-color: #01b075;
+    border: none;
+    color: #ffffff;
+}
+
+.button {
+    height: 40px;
+    background-color: #019160;
+    outline: none;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    padding: 0 16px;
+    min-width: 100px;
+    font-family: 'GoogleSans-Regular';
+}
+
+.button:hover {
+    background-color: #2fbe8e;
+}
+
+.button:active {
+    background-color: #01B075;
+}
+
+button.button {
+    padding-left: 16px;
+    padding-right: 16px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    outline: none;
+    border: none;
+}
+
+.button .button-icon {
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    flex-shrink: 0;
+}
+
+.button .button-icon-employee {
+    background-image: url('../../assets/icon/add.png');
+}
+
+.button-default {
+    border: 1px solid #bbbbbb;
+    padding: 0 24px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 40px;
+    min-width: 100px;
+    font-size: 13px;
+}
+
+.button-default:hover {
+    background-color: #BBBBBB;
+}
