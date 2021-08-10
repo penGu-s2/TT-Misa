@@ -20,7 +20,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
         /// </summary>
         /// <returns>List Customers</returns>
         /// 
-        //GET, POST, PUT, DELETE
+       
         [HttpGet()]
         public IActionResult GetCustomers()
         {
