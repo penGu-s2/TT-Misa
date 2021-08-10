@@ -15,6 +15,11 @@ namespace Demo.MisaCukCuk.Api.Controllers
     [ApiController]
     public class CustomersController : ControllerBase
     {
+        // <summary>
+        /// Lấy danh sách Customer
+        /// </summary>
+        /// <returns>List Customers</returns>
+        /// 
         //GET, POST, PUT, DELETE
         [HttpGet()]
         public IActionResult GetCustomers()
@@ -36,11 +41,16 @@ namespace Demo.MisaCukCuk.Api.Controllers
             // 4. Trả về cho client:
             return Ok(customers);
         }
+        /// <summary>
+        /// Thêm mới một khách hàng
+        /// </summary>
+        /// <param name="customer">Thông tin khách hàng</param>
+        /// <returns>số hàng đc thêm</returns>
         [HttpPost]
         public IActionResult InsertCustomer(Customer customer)
         {
             //Truy cập vào database:
-            // 1.Khai báo đối tượng
+            // 1.Khai báo thông tin kết nối db
             var connectionString = "Host = 47.241.69.179;" +
                 "Database = MISA.CukCuk_Demo_NVMANH;" +
                 "User Id = dev;" +
@@ -84,6 +94,118 @@ namespace Demo.MisaCukCuk.Api.Controllers
 
             var response = StatusCode(200, customer);
             return response;
+        }
+
+        /// <summary>
+        /// Lấy thông tin khách hàng theo Id
+        /// </summary>
+        /// <param name="customerId">Id khách hàng</param>
+        /// <returns>Thông tin khách hàng</returns>
+
+        [HttpGet("{customerId}")]
+        public IActionResult GetById(Guid customerId)
+        {
+            // Truy cập vào db:
+            // 1. Khai báo thông tin kết nối db:
+            var connectionString = "Host = 47.241.69.179;" +
+                "Database = MISA.CukCuk_Demo_NVMANH;" +
+                "User Id = dev;" +
+                "Password = 12345678";
+
+            // 2. Khởi tạo đối tượng kết nối với db:
+            IDbConnection dbConnection = new MySqlConnection(connectionString);
+
+            // 3. Lấy dữ liệu:
+            var sqlCommand = $"SELECT * FROM Customer WHERE CustomerId = @CustomerIdParam";
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@CustomerIdParam", customerId);
+            var customer = dbConnection.QueryFirstOrDefault<Customer>(sqlCommand, param: parameters);
+
+            // 4. Trả về cho client:
+            return Ok(customer);
+        }
+
+        /// <summary>
+        /// Xóa khách hàng theo Id
+        /// </summary>
+        /// <param name="customerId">Id khách hàng</param>
+        /// <returns>Thông tin khách hàng</returns>
+        [HttpDelete("{customerId}")]
+        public IActionResult DeleteById(Guid customerId)
+        {
+            // Truy cập vào db:
+            // 1. Khai báo thông tin kết nối db:
+            var connectionString = "Host = 47.241.69.179;" +
+                "Database = MISA.CukCuk_Demo_NVMANH;" +
+                "User Id = dev;" +
+                "Password = 12345678";
+
+            // 2. Khởi tạo đối tượng kết nối với db:
+            IDbConnection dbConnection = new MySqlConnection(connectionString);
+
+            // 3. Truy vấn
+            var sqlCommand = $"DELETE FROM Customer WHERE CustomerId = @CustomerIdParam";
+            DynamicParameters parameters = new DynamicParameters();
+            parameters.Add("@CustomerIdParam", customerId);
+            var customer = dbConnection.Execute(sqlCommand, param: parameters);
+            return Ok(customer);
+        }
+        /// <summary>
+        /// Thêm mới một khách hàng
+        /// </summary>
+        /// <param name="customer">Thông tin khách hàng</param>
+        /// <returns>số hàng đc thêm</returns>
+        [HttpPut("{customerId}")]
+        public IActionResult UpdateById(Guid customerId, [FromBody] Customer customer)
+        {
+            if (customerId != customer.CustomerId)
+            {
+                return BadRequest();
+            }
+            // Truy cập vào db:
+            // 1. Khai báo thông tin kết nối db:
+            var connectionString = "Host = 47.241.69.179;" +
+                "Database = MISA.CukCuk_Demo_NVMANH;" +
+                "User Id = dev;" +
+                "Password = 12345678";
+
+            // 2. Khởi tạo đối tượng kết nối với db:
+            IDbConnection dbConnection = new MySqlConnection(connectionString);
+
+            // Khai báo DynamicParam:
+            var dynamicParam = new DynamicParameters();
+            // 3. Thêm dữ liệu vào trong database:
+            var columnsName = string.Empty;
+
+            // Đọc từng property của object: 
+            var properties = customer.GetType().GetProperties();
+
+            //Duyệt từng property:
+            foreach (var prop in properties)
+            {
+                // Lấy tên của prop:
+                var propName = prop.Name;
+
+                // Lấy value của prop:
+                var propValue = prop.GetValue(customer);
+
+                // Lấy kiểu dữ liệu của prop:
+                var propType = prop.PropertyType;
+
+                // Thêm Param tương ứng vs mỗi property:
+                dynamicParam.Add($"@{propName}", propValue);
+
+                columnsName += $"{propName} = @{propName},";
+            }
+            columnsName = columnsName.Remove(columnsName.Length - 1, 1);
+
+            var sqlCommand = $"UPDATE Customer SET {columnsName} WHERE CustomerId = @CustomerId";
+
+            var rowEffects = dbConnection.Execute(sqlCommand, param: dynamicParam);
+
+            var response = StatusCode(200, rowEffects);
+
+            return Ok(response);
         }
     }
 }
