@@ -59,5 +59,32 @@ namespace Demo.MisaCukCuk.Api.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Không được để trống!.
+        /// </summary>
+        internal static string Blank {
+            get {
+                return ResourceManager.GetString("Blank", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Có lỗi xảy ra ! vui lòng liên hệ với MISA..
+        /// </summary>
+        internal static string Exception_Msg {
+            get {
+                return ResourceManager.GetString("Exception_Msg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Không đúng định dạng..
+        /// </summary>
+        internal static string Fail {
+            get {
+                return ResourceManager.GetString("Fail", resourceCulture);
+            }
+        }
     }
 }

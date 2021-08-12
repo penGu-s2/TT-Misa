@@ -51,7 +51,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                 var errObj = new
                 {
                     devMsg = e.Message,
-                    userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
+                    userMsg = Properties.Resources.Exception_Msg,
                     errorCode = "misa-001",
                     moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                     traceId = ""
@@ -76,7 +76,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                     var errorObj = new
                     {
                         devMsg = "CustomerCode is blank",
-                        userMsg = "Mã khách hàng trống",
+                        userMsg = "Mã khách hàng " + Properties.Resources.Blank,
                         errorCode = "misa-001",
                         moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                         traceId = ""
@@ -92,7 +92,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                     var errorObj = new
                     {
                         devMsg = "CustomerEmail is not correct format",
-                        userMsg = "Email không đúng định dạng",
+                        userMsg = "Email " + Properties.Resources.Fail,
                         errorCode = "misa-001",
                         moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                         traceId = ""
@@ -151,7 +151,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                 var errObj = new
                 {
                     devMsg = ex.Message,
-                    userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
+                    userMsg = Properties.Resources.Exception_Msg,
                     errorCode = "misa-001",
                     moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                     traceId = ""
@@ -207,7 +207,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                 var errObj = new
                 {
                     devMsg = ex.Message,
-                    userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
+                    userMsg = Properties.Resources.Exception_Msg,
                     errorCode = "misa-001",
                     moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                     traceId = ""
@@ -250,7 +250,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                 var errorObj = new
                 {
                     devMsg = ex.Message,
-                    userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
+                    userMsg = Properties.Resources.Exception_Msg,
                     errorCode = "misa-001",
                     moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                     traceId = ""
@@ -275,7 +275,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                     var errorObj = new
                     {
                         devMsg = "CustomerCode is blank",
-                        userMsg = "Mã khách hàng trống",
+                        userMsg = "Mã khách hàng " + Properties.Resources.Blank,
                         errorCode = "misa-001",
                         moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                         traceId = ""
@@ -291,7 +291,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                     var errorObj = new
                     {
                         devMsg = "CustomerEmail is not correct format",
-                        userMsg = "Email không đúng định dạng",
+                        userMsg = "Email " + Properties.Resources.Fail,
                         errorCode = "misa-001",
                         moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                         traceId = ""
@@ -349,7 +349,7 @@ namespace Demo.MisaCukCuk.Api.Controllers
                 var errorObj = new
                 {
                     devMsg = ex.Message,
-                    userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
+                    userMsg = Properties.Resources.Exception_Msg,
                     errorCode = "misa-001",
                     moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                     traceId = ""
