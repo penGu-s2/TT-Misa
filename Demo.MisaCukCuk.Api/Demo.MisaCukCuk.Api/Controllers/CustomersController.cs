@@ -24,23 +24,40 @@ namespace Demo.MisaCukCuk.Api.Controllers
         [HttpGet()]
         public IActionResult GetCustomers()
         {
-            // Truy cập vào db:
-            // 1. Khai báo thông tin kết nối db:
-            var connectionString = "Host = 47.241.69.179;" + 
-                "Database = MISA.CukCuk_Demo_NVMANH;" +
-                "User Id = dev;" + 
-                "Password = 12345678";
-            
-            // 2. Khởi tạo đối tượng kết nối với db:
-            IDbConnection dbConnection = new MySqlConnection(connectionString);
+            try
+            {
+                // Truy cập vào db:
+                // 1. Khai báo thông tin kết nối db:
+                var connectionString = "Host = 47.241.69.179;" +
+                    "Database = MISA.CukCuk_Demo_NVMANH;" +
+                    "User Id = dev;" +
+                    "Password = 12345678";
 
-            // 3. Lấy dữ liệu:
-            var sqlCommand = "SELECT * FROM Customer";
-            var customers = dbConnection.Query<Customer>(sqlCommand);
+                // 2. Khởi tạo đối tượng kết nối với db:
+                IDbConnection dbConnection = new MySqlConnection(connectionString);
 
-            // 4. Trả về cho client:
-            var response = StatusCode(200, customers);
-            return response;
+                // 3. Lấy dữ liệu:
+                var sqlCommand = "SELECT * FROM Customer";
+                var customers = dbConnection.Query<Customer>(sqlCommand);
+
+                // 4. Trả về cho client:
+                var response = StatusCode(200, customers);
+                return response;
+            }
+            catch (Exception e)
+            {
+
+                var errObj = new
+                {
+                    devMsg = e,
+                    userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
+                    errorCode = "misa-001",
+                    moreInfo = "https://openapi.misa.com.vn/errorcode/misa-001",
+                    traceId = ""
+                };
+                return StatusCode(500, errObj);
+            }
+           
         }
         /// <summary>
         /// Thêm mới một khách hàng

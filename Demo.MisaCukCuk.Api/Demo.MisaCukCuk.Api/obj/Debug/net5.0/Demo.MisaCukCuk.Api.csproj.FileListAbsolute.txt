@@ -60,3 +60,5 @@ G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0
 G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\ref\Demo.MisaCukCuk.Api.dll
 G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.pdb
 G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.genruntimeconfig.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.Properties.Resources.resources
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.csproj.GenerateResource.cache
