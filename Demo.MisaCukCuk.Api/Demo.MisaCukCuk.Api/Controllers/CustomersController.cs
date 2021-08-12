@@ -49,10 +49,10 @@ namespace Demo.MisaCukCuk.Api.Controllers
 
                 var errObj = new
                 {
-                    devMsg = e,
+                    devMsg = e.Message,
                     userMsg = "Có lỗi xảy ra ! vui lòng liên hệ với MISA.",
                     errorCode = "misa-001",
-                    moreInfo = "https://openapi.misa.com.vn/errorcode/misa-001",
+                    moreInfo = @"https://openapi.misa.com.vn/errorcode/misa-001",
                     traceId = ""
                 };
                 return StatusCode(500, errObj);
