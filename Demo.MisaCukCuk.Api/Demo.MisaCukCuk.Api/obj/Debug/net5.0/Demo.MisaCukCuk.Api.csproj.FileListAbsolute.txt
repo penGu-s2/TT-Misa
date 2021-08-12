@@ -29,3 +29,34 @@ C:\Users\M'penGu\source\repos\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\
 C:\Users\M'penGu\source\repos\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\ref\Demo.MisaCukCuk.Api.dll
 C:\Users\M'penGu\source\repos\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.pdb
 C:\Users\M'penGu\source\repos\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.genruntimeconfig.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\appsettings.Development.json
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\appsettings.json
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Demo.MisaCukCuk.Api.exe
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Demo.MisaCukCuk.Api.deps.json
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Demo.MisaCukCuk.Api.runtimeconfig.json
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Demo.MisaCukCuk.Api.runtimeconfig.dev.json
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Demo.MisaCukCuk.Api.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\ref\Demo.MisaCukCuk.Api.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Demo.MisaCukCuk.Api.pdb
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Dapper.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\MySqlConnector.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.csproj.AssemblyReference.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.GeneratedMSBuildEditorConfig.editorconfig
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.AssemblyInfoInputs.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.AssemblyInfo.cs
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.csproj.CoreCompileInputs.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.MvcApplicationPartsAssemblyInfo.cs
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.MvcApplicationPartsAssemblyInfo.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\staticwebassets\Demo.MisaCukCuk.Api.StaticWebAssets.Manifest.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\staticwebassets\Demo.MisaCukCuk.Api.StaticWebAssets.xml
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\scopedcss\bundle\Demo.MisaCukCuk.Api.styles.css
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.RazorTargetAssemblyInfo.cache
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.csproj.CopyComplete
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\ref\Demo.MisaCukCuk.Api.dll
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.pdb
+G:\Thực tập\TT-Misa\Demo.MisaCukCuk.Api\Demo.MisaCukCuk.Api\obj\Debug\net5.0\Demo.MisaCukCuk.Api.genruntimeconfig.cache

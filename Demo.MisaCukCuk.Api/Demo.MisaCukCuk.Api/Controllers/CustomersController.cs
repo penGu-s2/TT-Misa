@@ -11,7 +11,7 @@ using Demo.MisaCukCuk.Api.Model;
 
 namespace Demo.MisaCukCuk.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/v1/[controller]")]
     [ApiController]
     public class CustomersController : ControllerBase
     {
@@ -39,7 +39,8 @@ namespace Demo.MisaCukCuk.Api.Controllers
             var customers = dbConnection.Query<Customer>(sqlCommand);
 
             // 4. Trả về cho client:
-            return Ok(customers);
+            var response = StatusCode(200, customers);
+            return response;
         }
         /// <summary>
         /// Thêm mới một khách hàng
@@ -122,7 +123,8 @@ namespace Demo.MisaCukCuk.Api.Controllers
             var customer = dbConnection.QueryFirstOrDefault<Customer>(sqlCommand, param: parameters);
 
             // 4. Trả về cho client:
-            return Ok(customer);
+            var response = StatusCode(200, customer);
+            return response;
         }
 
         /// <summary>
@@ -148,7 +150,8 @@ namespace Demo.MisaCukCuk.Api.Controllers
             DynamicParameters parameters = new DynamicParameters();
             parameters.Add("@CustomerIdParam", customerId);
             var customer = dbConnection.Execute(sqlCommand, param: parameters);
-            return Ok(customer);
+            var response = StatusCode(200, customer);
+            return response;
         }
         /// <summary>
         /// Thêm mới một khách hàng
