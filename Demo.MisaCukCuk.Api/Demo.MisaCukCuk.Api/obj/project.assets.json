@@ -90,6 +90,26 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
+      },
+      "Misa.core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Misa.core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Misa.core.dll": {}
+        }
+      },
+      "Misa.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/Misa.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Misa.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -258,11 +278,23 @@
         "swashbuckle.aspnetcore.swaggerui.6.1.5.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
+    },
+    "Misa.core/1.0.0": {
+      "type": "project",
+      "path": "../Misa.core/Misa.core.csproj",
+      "msbuildProject": "../Misa.core/Misa.core.csproj"
+    },
+    "Misa.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Misa.Infrastructure/Misa.Infrastructure.csproj",
+      "msbuildProject": "../Misa.Infrastructure/Misa.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Dapper >= 2.0.90",
+      "Misa.Infrastructure >= 1.0.0",
+      "Misa.core >= 1.0.0",
       "MySqlConnector >= 1.3.11",
       "Swashbuckle.AspNetCore >= 6.1.5"
     ]
@@ -293,7 +325,14 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "G:\\Thực tập\\TT-Misa\\Demo.MisaCukCuk.Api\\Misa.core\\Misa.core.csproj": {
+              "projectPath": "G:\\Thực tập\\TT-Misa\\Demo.MisaCukCuk.Api\\Misa.core\\Misa.core.csproj"
+            },
+            "G:\\Thực tập\\TT-Misa\\Demo.MisaCukCuk.Api\\Misa.Infrastructure\\Misa.Infrastructure.csproj": {
+              "projectPath": "G:\\Thực tập\\TT-Misa\\Demo.MisaCukCuk.Api\\Misa.Infrastructure\\Misa.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
